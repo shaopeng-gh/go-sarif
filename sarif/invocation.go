@@ -5,10 +5,11 @@ import "time"
 // Invocation describes the runtime environment of the analysis tool run.
 type Invocation struct {
 	PropertyBag
-	StartTimeUTC        *time.Time        `json:"startTimeUtc,omitempty"`
-	EndTimeUTC          *time.Time        `json:"endTimeUtc,omitempty"`
-	ExecutionSuccessful bool              `json:"executionSuccessful"`
-	WorkingDirectory    *ArtifactLocation `json:"workingDirectory,omitempty"`
+	StartTimeUTC               *time.Time        `json:"startTimeUtc,omitempty"`
+	EndTimeUTC                 *time.Time        `json:"endTimeUtc,omitempty"`
+	ExecutionSuccessful        bool              `json:"executionSuccessful"`
+	WorkingDirectory           *ArtifactLocation `json:"workingDirectory,omitempty"`
+	ToolExecutionNotifications []*Notification   `json:"toolExecutionNotifications,omitempty"`
 }
 
 // WithStartTimeUTC sets the instant when the invocation started and returns the same Invocation.
@@ -28,5 +29,11 @@ func (i *Invocation) WithEndTimeUTC(endTime time.Time) *Invocation {
 // WithWorkingDirectory sets the current working directory of the invocation and returns the same Invocation.
 func (i *Invocation) WithWorkingDirectory(workingDirectory *ArtifactLocation) *Invocation {
 	i.WorkingDirectory = workingDirectory
+	return i
+}
+
+// WithToolExecutionNotifications ...
+func (i *Invocation) WithToolExecutionNotifications(notification *Notification) *Invocation {
+	i.ToolExecutionNotifications = append(i.ToolExecutionNotifications, notification)
 	return i
 }
