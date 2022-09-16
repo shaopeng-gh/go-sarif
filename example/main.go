@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/owenrumney/go-sarif/v2/sarif"
+	"github.com/shaopeng-gh/go-sarif/v2/sarif"
 )
 
 // TfsecResults is a simple structure for the output of tfsec
