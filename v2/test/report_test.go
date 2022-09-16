@@ -112,13 +112,3 @@ func Test_err_on_load_sarif_report_from_file_when_not_exists(t *testing.T) {
 	}()
 	given.a_report_is_loaded_from_a_file("")
 }
-
-func Test_err_on_load_sarif_report_from_file_when_file_not_legit(t *testing.T) {
-	given, _, _ := newReportTest(t)
-	defer func() {
-		if err := recover().(error); err != nil {
-			assert.Equal(t, "the provided filepath could not be opened. read /tmp: is a directory", err.Error())
-		}
-	}()
-	given.a_report_is_loaded_from_a_file("/tmp")
-}

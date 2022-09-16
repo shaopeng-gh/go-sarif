@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/owenrumney/go-sarif/sarif"
+	"github.com/shaopeng-gh/go-sarif/sarif"
 	"github.com/stretchr/testify/assert"
 )
 

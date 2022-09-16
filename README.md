@@ -1,6 +1,6 @@
 # go-sarif
-[![Go Report Card](https://goreportcard.com/badge/github.com/owenrumney/go-sarif)](https://goreportcard.com/report/github.com/owenrumney/go-sarif) 
-[![Github Release](https://img.shields.io/github/release/owenrumney/go-sarif.svg)](https://github.com/owenrumney/go-sarif/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/shaopeng-gh/go-sarif)](https://goreportcard.com/report/github.com/shaopeng-gh/go-sarif) 
+[![Github Release](https://img.shields.io/github/release/shaopeng-gh/go-sarif.svg)](https://github.com/shaopeng-gh/go-sarif/releases)
 
 ## What?
 
@@ -78,7 +78,7 @@ For more information about SARIF, you can visit the [Oasis Open](https://www.oas
 
 ## Usage
 
-Add an import to `go get github.com/owenrumney/go-sarif/sarif`
+Add an import to `go get github.com/shaopeng-gh/go-sarif/sarif`
 ### Parsing a Sarif report
 
 There are a number of ways to load in the content of a sarif report.
